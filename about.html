@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4682b4;
+        }
+        .list-item {
+            color: red;
+            font-size: 18px;
+            list-style: none;
+            padding: 10px;
+        }
+        ul {
+            padding: 0;
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 300px;
+            height: 350px;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>About Me</h1>
+    <ul>
+        <li class="list-item">Nickname: <span id="nickname"></span></li>
+        <li class="list-item">Favorites: <span id="favorites"></span></li>
+        <li class="list-item">Hometown: <span id="hometown"></span></li>
+    </ul>
+
+    <script>
+        // Changing the font family of the body
+        document.body.style.fontFamily = "Arial, sans-serif";
+
+        // Replace span contents with personal information
+        document.getElementById("nickname").textContent = "Muha";
+        document.getElementById("favorites").textContent = "Coding, Food Delivery, E-Commerce";
+        document.getElementById("hometown").textContent = "Oyo-Iseyin";
+
+       
+        let listItems = document.querySelectorAll('li');
+        listItems.forEach(item => {
+            item.className = 'list-item';
+        });
+
+        
+        let img = document.createElement('img');
+        img.src = 'muha.jpg'; 
+        img.alt = "Picture of me";
+        document.body.appendChild(img);
+    </script>
+</body>
+</html>
